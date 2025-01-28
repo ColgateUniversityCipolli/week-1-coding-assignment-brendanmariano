@@ -99,6 +99,7 @@
 \begin{knitrout}\scriptsize
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
+\hlcom{#To load library}
 \hlkwd{library}\hldef{(aRtsy)}
 \end{alltt}
 \end{kframe}
@@ -114,8 +115,9 @@
 \begin{knitrout}\scriptsize
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hlcom{#set.seed(1)}
-\hlcom{#canvas_collatz(colors = colorPalette("tuscany3"))}
+\hlcom{#Sets seed and colorPalette to specified value}
+\hlkwd{set.seed}\hldef{(}\hlnum{1}\hldef{)}
+\hlkwd{canvas_collatz}\hldef{(}\hlkwc{colors} \hldef{=} \hlkwd{colorPalette}\hldef{(}\hlsng{"tuscany3"}\hldef{))}
 \hlcom{# help("aRtsy")}
 \end{alltt}
 \end{kframe}
@@ -141,8 +143,10 @@
 \begin{knitrout}\scriptsize
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hlcom{# set.seed(1313)}
-\hlcom{# canvas_collatz(colors = colorPalette("tuscany3"))}
+ \hlcom{#Changes seed}
+ \hlcom{#Creates arrangement and shape of some strands}
+ \hlkwd{set.seed}\hldef{(}\hlnum{1313}\hldef{)}
+ \hlkwd{canvas_collatz}\hldef{(}\hlkwc{colors} \hldef{=} \hlkwd{colorPalette}\hldef{(}\hlsng{"tuscany3"}\hldef{))}
 \end{alltt}
 \end{kframe}
 \end{knitrout}
@@ -176,8 +180,9 @@
 \begin{knitrout}\scriptsize
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hlcom{#set.seed(1313)}
-\hlcom{#canvas_collatz(colors = colorPalette("vrolik4"), background = "#dbdbdb", n = 72, , angle.odd = -.05, angle.even = 0.0145)}
+\hlkwd{set.seed}\hldef{(}\hlnum{1313}\hldef{)}
+\hlkwd{canvas_collatz}\hldef{(}\hlkwc{colors} \hldef{=} \hlkwd{colorPalette}\hldef{(}\hlsng{"vrolik4"}\hldef{),}
+\hlkwc{background} \hldef{=} \hlsng{"#dbdbdb"}\hldef{,} \hlkwc{n} \hldef{=} \hlnum{72}\hldef{, ,} \hlkwc{angle.odd} \hldef{=} \hlopt{-}\hlnum{.05}\hldef{,} \hlkwc{angle.even} \hldef{=} \hlnum{0.0145}\hldef{)}
 \end{alltt}
 \end{kframe}
 \end{knitrout}
@@ -200,11 +205,13 @@
   Make sure that your code is well-formatted and your plot is appropriately scaled.\\
   \textbf{Solution:}
   
-\begin{knitrout}
+\begin{knitrout}\scriptsize
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
 \begin{alltt}
-\hlkwd{set.seed}(2)
-\hlkwd{canvas_collatz}(colors = \hlkwd{colorPalette}(\hlsng{"azul"}), \hlkwd{background}(\hlsng{"fafafa"}), n = 100, angle.odd = .9 = angle.even = -.9)
+\hlcom{#Self created plot}
+\hlkwd{set.seed}\hldef{(}\hlnum{2}\hldef{)}
+\hlkwd{canvas_collatz}\hldef{(}\hlkwc{colors} \hldef{=} \hlkwd{colorPalette}\hldef{(}\hlsng{"azul"}\hldef{),} \hlkwc{background} \hldef{=} \hlsng{"#fafafa"}\hldef{,}
+\hlkwc{n} \hldef{=} \hlnum{100}\hldef{,} \hlkwc{angle.odd} \hldef{=} \hlnum{.9}\hldef{,} \hlkwc{angle.even} \hldef{=} \hlopt{-}\hlnum{.9}\hldef{)}
 \end{alltt}
 \end{kframe}
 \end{knitrout}
@@ -219,7 +226,7 @@
   package and use \verb|\citep{}| to add a parenthetical citation to the end of
   the sentence below.
 \\\textbf{Solution:} We created the generative art in Question 1 using the \texttt{aRtsy}
-package for \texttt{R}.\citep{aRtsyCite}
+package for \texttt{R}\citep{aRtsyCite}.
 \bibliography{bibliography}
 \end{enumerate}
 
@@ -239,6 +246,10 @@ package for \texttt{R}.\citep{aRtsyCite}
 \textbf{Solution:}
 \begin{knitrout}\scriptsize
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hldef{vector} \hlkwb{=} \hlkwd{seq}\hldef{(}\hlkwc{from} \hldef{=} \hlnum{0}\hldef{,} \hlkwc{to} \hldef{=} \hlnum{10}\hldef{,} \hlkwc{by} \hldef{=} \hlnum{1}\hldef{)}
+\hldef{vector}
+\end{alltt}
 \begin{verbatim}
 ##  [1]  0  1  2  3  4  5  6  7  8  9 10
 \end{verbatim}
@@ -251,6 +262,11 @@ package for \texttt{R}.\citep{aRtsyCite}
 \textbf{Solution: }
 \begin{knitrout}\scriptsize
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlcom{#Performs computations for each vector value}
+\hldef{result} \hlkwb{=} \hlnum{2}\hlopt{^}\hldef{(vector} \hlopt{+} \hlnum{1}\hldef{)} \hlopt{+} \hlnum{2}\hlopt{^}\hldef{(vector}\hlopt{-}\hlnum{1}\hldef{)}
+\hldef{result}
+\end{alltt}
 \begin{verbatim}
 ##  [1]    2.5    5.0   10.0   20.0   40.0   80.0  160.0  320.0  640.0 1280.0
 ## [11] 2560.0
@@ -264,6 +280,12 @@ package for \texttt{R}.\citep{aRtsyCite}
 \textbf{Solution:}
 \begin{knitrout}\scriptsize
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+  \hlcom{#Uses which function to find index that contains 40}
+  \hlcom{#which produces 40 in the equation}
+  \hldef{index} \hlkwb{=} \hlkwd{which}\hldef{(result} \hlopt{==} \hlnum{40.0}\hldef{)}
+  \hldef{index}
+\end{alltt}
 \begin{verbatim}
 ## [1] 5
 \end{verbatim}
@@ -276,6 +298,9 @@ package for \texttt{R}.\citep{aRtsyCite}
 \textbf{Solution:}
 \begin{knitrout}\scriptsize
 \definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hldef{index} \hlopt{-} \hlnum{1}
+\end{alltt}
 \begin{verbatim}
 ## [1] 4
 \end{verbatim}
