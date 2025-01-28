@@ -66,7 +66,7 @@ canvas_collatz(colors = colorPalette("tuscany3"))
 <<echo=FALSE,fig.dim=c(4,4)>>=
 <<CollatzPlot1>>
 @
-\caption{Modified drawing}
+\caption{First Image Produced by Canvas Collatz}
 \label{CollatzPlot1}
 \end{center}
 \end{figure}
@@ -79,7 +79,7 @@ canvas_collatz(colors = colorPalette("tuscany3"))
 \textbf{Solution:}
 <<CollatzPlot2, eval=FALSE, size="scriptsize", warning=FALSE, message=FALSE>>=
  #Changes seed
- #Creates arrangement and shape of some strands
+ #Creates different arrangement and shape of some strands
  set.seed(1313)
  canvas_collatz(colors = colorPalette("tuscany3"))
 @
@@ -89,7 +89,7 @@ canvas_collatz(colors = colorPalette("tuscany3"))
 <<echo=FALSE,fig.dim=c(4,4)>>=
 <<CollatzPlot2>>
 @
-\caption{Drawing with seed of 1313}
+\caption{Drawing With Seed of 1313}
 \label{CollatzPlot2}
 \end{center}
 \end{figure}
@@ -120,7 +120,7 @@ background = "#dbdbdb", n = 72, , angle.odd = -.05, angle.even = 0.0145)
 <<echo=FALSE,fig.dim=c(4,4)>>=
 <<CollatzPlot3>>
 @
-\caption{Circular strands}
+\caption{Circular Strands}
 \label{CollatzPlot3}
 \end{center}
 \end{figure}
@@ -203,7 +203,7 @@ index - 1
   % QUESTION 2e
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \item Explain why this approach wouldn't work for something like $3^{x+2} + 5 (3^x) = 84$ where the solution is $x \approx 1.6309$.\\
-\textbf{Solution: This approach wouldn't work using the vector approach because x needs to be an index, which means that it has to be a whole number. }
+\textbf{Solution: This approach wouldn't work using the vector approach because x is always an index, which means that it has to be a whole number. }
 \end{enumerate}
 \end{enumerate}
 
